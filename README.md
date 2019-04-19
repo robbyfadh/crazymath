@@ -9,3 +9,4 @@ Aplikasi game sederhana yang dibuat dengan PHP, untuk melatih kemampuan perhitun
 * Apabila lives bernilai 0 maka GAME OVER
 * Penambahan username dan foto
 * Tersedia fitur reset apabila ingin mengganti pemain
+* Tambahkan folder "photos" bersama file-file tersebut untuk menyimpan file foto
