@@ -23,7 +23,7 @@
 			if ($status == false){
 		?>
 			Masukkan nama Anda <input type="text" name="username"><br>	
-   			Upload foto Anda <input type="file" name="foto"><br>
+   			Upload foto Anda <input type="file" name="foto" accept="image/*"><br>
    			<input type="submit" name="submit1" value="Start !!">
 		<?php		
 			} else {
@@ -31,7 +31,7 @@
 			// tanggal terakhir kali main, dan score. Data ini diambil dari cookie
 			// serta tampilkan tombol submit dg nama 'submit2'	
 			echo "<p>Welcome back, ".$_COOKIE['username']."</p>";
-			echo "<img src='";
+			echo "<img src='photos/";
 			echo $_COOKIE['foto'];
 			echo "' width='300px' height='300px'>";
 			echo "<p>Sebelumnya, terakhir kali Anda main game ini tanggal ".$_COOKIE['lasttime']." dengan score ".$_COOKIE['score']."</p>";	
