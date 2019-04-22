@@ -12,8 +12,8 @@
 		//upload foto dengan nama user-tanggal dan waktu
 		$filename=$_FILES["foto"]["name"];
 		$extension=end(explode(".", $filename));
-	 	$namabaru = "photos/".$_POST['username']."-".date('YmdHis').".".$extension;
-		move_uploaded_file($_FILES["foto"]["tmp_name"],$namabaru);
+	 	$namabaru = $_POST['username']."-".date('YmdHis').".".$extension;
+		move_uploaded_file($_FILES["foto"]["tmp_name"],"photos/".$namabaru);
 		setcookie('foto', $namabaru, time()+3600*24*7);
 	}
 	// jika action.php ini diload dari tombol submit (dari halaman action.php sendiri)
@@ -40,7 +40,7 @@
 	<?php
 		// tampilkan username & foto dari cookie
 		echo "<p>Username: ".$_COOKIE['username']."</p><br>";
-		echo "<img src='";
+		echo "<img src='photos/";
 		echo $_COOKIE['foto'];
 		echo "' width='300px' height='300px'>";
 		// tampilkan lives dan score dari session
